@@ -1,8 +1,27 @@
 /// <reference types="cypress" />
-describe('Testing samething on Google', () => {
-    // komment
-    it ('I can serch samething', () => {
-        cy.visit('https://google.com');
-        // cy.get('input [input id="zipcode"]').type('23235').type('{enter}')
-    });
-});
+// command: C:\Users\quinn\Desktop\DzUm> npx cypress open
+
+describe('My First Test', () => {
+    it('Öppna ICA hemsida', () => {
+        cy.visit('https://www.ica.se/')
+        cy.contains('Godkänn cookies').click()
+        //cy.get('#onetrust-accept-btn-handler').click()       
+    })
+  })
+
+describe('My Second Test', () => {
+  it('Öppna ICA hemsida', () => {
+      cy.visit('https://www.ica.se/')
+      cy.contains('Godkänn cookies').click()
+      // cy.get('#onetrust-accept-btn-handler').click()       
+  })
+
+  it('Logga in på ICA hemsida', () => {
+      cy.visit('https://www.ica.se/')
+      cy.get('#onetrust-accept-btn-handler').click()   
+      //cy.get('.btn').click()    
+      cy.contains('Logga in').click()
+    //  cy.get('input[]')
+      cy.get('.fullscreen-iframe-modal__header-cancel > svg').click()
+  })
+})

@@ -1,5 +1,6 @@
+// command: C:\Users\quinn\Desktop\DzUm> npx cypress open
 
-
+/// <reference types="cypress" />
 describe('My First Test', () => {
     it('Öppna ICA hemsida', () => {
         cy.visit('https://www.ica.se/')
